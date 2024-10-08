@@ -2,7 +2,10 @@
 
 #include "Cpp_Tools_ProjectGameMode.h"
 #include "Cpp_Tools_ProjectCharacter.h"
+#include "MenuPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
+#include "MenuHUD.h"
+
 
 ACpp_Tools_ProjectGameMode::ACpp_Tools_ProjectGameMode()
 {
@@ -12,4 +15,7 @@ ACpp_Tools_ProjectGameMode::ACpp_Tools_ProjectGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+
+	PlayerControllerClass = AMenuPlayerController::StaticClass();
+	HUDClass = AMenuHUD::StaticClass();
 }

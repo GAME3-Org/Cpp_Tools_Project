@@ -11,5 +11,8 @@ public class Cpp_Tools_ProjectTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
 		ExtraModuleNames.Add("Cpp_Tools_Project");
+
+		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+
 	}
 }
