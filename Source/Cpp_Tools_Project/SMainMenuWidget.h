@@ -3,7 +3,7 @@
 #pragma once
 
 
-
+#include "MenuHUD.h"
 #include "SlateBasics.h"
 #include "SlateExtras.h"
 
@@ -26,6 +26,10 @@ public:
 	/** every widget needs a construction function */
 	void Construct(const FArguments& InArgs);
 
+	FReply	OnPlayClicked() const;
+	
+	FReply	OnQuitClicked() const;
+
 //lass AMenuHUD*
 
 	//not u object manage memory by urself
@@ -38,5 +42,5 @@ public:
 	//SMainMenuWidget();
 	//~SMainMenuWidget();
 
-	virtual bool SupportsKeyboardFocus() const override {return true};
+	virtual bool SupportsKeyboardFocus() const override {return true;};
 };
